@@ -9,15 +9,15 @@
 		    <UL>
 			    {% for s in state.values()|sort(attribute="name") %}
 			    <LI>{{ s.id }}: <B>{{ s.name }}</B></LI>
-			{% endfor %}
+			    {% endfor %}
 		    </UL>
 		    {% elif state is defined %}
 		    <H1>State: {{ state.name }}</H1>
 		    <H3>Cities:</H3>
 		    <UL>
 			    {% for city in state.cities|sort(attribute="name") %}
-			    	<LI>{{ city.id }}: <B>{{ city.name }}</B></LI>
-			{% endfor %}
+			    <LI>{{ city.id }}: <B>{{ city.name }}</B></LI>
+			    {% endfor %}
 		    </UL>
 		    {% else % }
 		    <H1>Not found!</H1>
